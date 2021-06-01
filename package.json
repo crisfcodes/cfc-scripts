@@ -1,5 +1,5 @@
 {
-  "name": "kcd-scripts",
+  "name": "cfc-scripts",
   "version": "0.0.0-semantically-released",
   "description": "CLI for common scripts for my projects",
   "engines": {
@@ -8,7 +8,7 @@
     "yarn": ">=1"
   },
   "bin": {
-    "kcd-scripts": "dist/index.js"
+    "cfc-scripts": "dist/index.js"
   },
   "scripts": {
     "test": "node src test",
@@ -29,7 +29,10 @@
     "shared-tsconfig.json"
   ],
   "keywords": [],
-  "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com)",
+  "authors": [
+    "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com)",
+    "Cristian C. Flórez <cristianflorez0501@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.13.14",
@@ -64,7 +67,7 @@
     "cross-spawn": "^7.0.3",
     "doctoc": "^2.0.0",
     "eslint": "^7.24.0",
-    "eslint-config-kentcdodds": "^18.0.0",
+    "eslint-config-crisfcodes": "^1.0.0",
     "glob": "^7.1.6",
     "husky": "^4.3.8",
     "is-ci": "^3.0.0",
@@ -91,8 +94,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "kentcdodds",
-      "kentcdodds/jest"
+      "crisfcodes",
+      "crisfcodes/jest"
     ],
     "rules": {
       "no-process-exit": "off",
@@ -112,12 +115,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/kentcdodds/kcd-scripts"
+    "url": "https://github.com/crisfcodes/cfc-scripts"
   },
   "bugs": {
-    "url": "https://github.com/kentcdodds/kcd-scripts/issues"
+    "url": "https://github.com/crisfcodes/cfc-scripts/issues"
   },
-  "homepage": "https://github.com/kentcdodds/kcd-scripts#readme",
+  "homepage": "https://github.com/crisfcodes/cfc-scripts#readme",
   "devDependencies": {
     "jest-in-case": "^1.0.2",
     "slash": "^3.0.0"

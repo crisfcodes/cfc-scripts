@@ -8,7 +8,7 @@ Also, please make sure you're familiar with and follow the instructions in the
 contributing guidelines (found in the CONTRIBUTING.md file).
 
 If you're new to contributing to open source projects, you might find this free
-video course helpful: http://kcd.im/pull-request
+video course helpful: http://cfc.im/pull-request
 
 Please fill out the information below to expedite the review and (hopefully)
 merge of your pull request!
@@ -37,6 +37,6 @@ merge of your pull request!
 - [ ] Documentation
 - [ ] Tests
 - [ ] Ready to be merged
-      <!-- In your opinion, is this ready to be merged as soon as it's reviewed? -->
+<!-- In your opinion, is this ready to be merged as soon as it's reviewed? -->
 
 <!-- feel free to add additional comments -->

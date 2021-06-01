@@ -18,13 +18,13 @@ const appDirectory = path.dirname(pkgPath)
 
 function resolveKcdScripts() {
   if (
-    pkg.name === 'kcd-scripts' ||
-    // this happens on install of husky within kcd-scripts locally
+    pkg.name === 'cfc-scripts' ||
+    // this happens on install of husky within cfc-scripts locally
     appDirectory.includes(path.join(__dirname, '..'))
   ) {
     return require.resolve('./').replace(process.cwd(), '.')
   }
-  return resolveBin('kcd-scripts')
+  return resolveBin('cfc-scripts')
 }
 
 // eslint-disable-next-line complexity
@@ -32,7 +32,9 @@ function resolveBin(modName, {executable = modName, cwd = process.cwd()} = {}) {
   let pathFromWhich
   try {
     pathFromWhich = fs.realpathSync(which.sync(executable))
-    if (pathFromWhich && pathFromWhich.includes('.CMD')) return pathFromWhich
+    if (pathFromWhich && pathFromWhich.includes('.CMD')) {
+      return pathFromWhich
+    }
   } catch (_error) {
     // ignore _error
   }
@@ -182,7 +184,9 @@ async function generateTypeDefs(outputDir) {
     ],
     {stdio: 'inherit'},
   )
-  if (result.status !== 0) return result
+  if (result.status !== 0) {
+    return result
+  }
 
   await cpy('**/*.d.ts', '../dist', {cwd: fromRoot('src'), parents: true})
   return result
