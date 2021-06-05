@@ -11,9 +11,9 @@ module.exports = {
   proseWrap: 'always',
   quoteProps: 'as-needed',
   requirePragma: false,
-  semi: false,
+  semi: true,
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'all',
   useTabs: false,
-}
+};
