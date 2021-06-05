@@ -1,4 +1,4 @@
-const {ifAnyDep} = require('../utils')
+const {ifAnyDep} = require('../utils');
 
 module.exports = {
   extends: [
@@ -8,7 +8,10 @@ module.exports = {
     require.resolve('eslint-config-crisfcodes/comments'),
     ifAnyDep('react', require.resolve('eslint-config-crisfcodes/jsx-a11y')),
     ifAnyDep('react', require.resolve('eslint-config-crisfcodes/react')),
-    ifAnyDep('react', require.resolve('eslint-config-crisfcodes/react-native')),
+    ifAnyDep(
+      ['react-native', 'expo'],
+      require.resolve('eslint-config-crisfcodes/react-native'),
+    ),
   ].filter(Boolean),
   rules: {},
-}
+};
